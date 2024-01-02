@@ -21,7 +21,3 @@ public:
         return {a, b};
     }
 };
-int main()
-{
-   Solution First(2,7,11,15); 
-}
