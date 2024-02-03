@@ -21,7 +21,10 @@ public:
         return {a, b};
     }
 };
+<<<<<<< HEAD
 // int main()
 // {
 //    Solution First(2,7,11,15); 
 // }
+=======
+>>>>>>> 18107664fb6687ce6d85689f74cbdd7d553baea0
