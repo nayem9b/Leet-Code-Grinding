@@ -16,7 +16,7 @@ public:
                 power += tokens[r];           // increase the power
                 s--;                         // Decrease the score.
                 r--;                        // Move the right pointer to the left.
-            } 
+            }  
             else {
                 break;                   // exit the loop if neither condition is met
             }
