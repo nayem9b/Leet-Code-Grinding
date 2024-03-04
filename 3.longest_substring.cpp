@@ -4,8 +4,8 @@
 
 class Solution {
 public:
-    int lengthOfLongestSubstring(std::string s) {
-        std::unordered_set<char> charSet;
+    int lengthOfLongestSubstring(string s) {
+        unordered_set<char> charSet;
         int l = 0;
         int res = 0;
 
@@ -15,7 +15,7 @@ public:
                 ++l;
             }
             charSet.insert(s[r]);
-            res = std::max(res, r - l + 1);
+            res = max(res, r - l + 1);
         }
         return res;
     }
