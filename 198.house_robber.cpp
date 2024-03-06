@@ -1,4 +1,4 @@
-class HouseRobber {
+class Solution {
 public:
     int rob(vector<int>& nums) {
         // If only 1 element, just return it
