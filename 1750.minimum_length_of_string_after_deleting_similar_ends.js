@@ -1,5 +1,5 @@
 const minimumLength = (s) => {
-    let left = 0; right = s.length - 1;
+    let left =0; right = s.length - 1;
     while (left < right && s[left] === s[right]) {
         let char = s[left];
         while (s[left] == char) {
