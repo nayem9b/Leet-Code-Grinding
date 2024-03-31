@@ -1,4 +1,4 @@
-class PascalsTriangle {
+class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
         vector<vector<int>> result;
