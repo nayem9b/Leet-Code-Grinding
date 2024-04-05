@@ -2,19 +2,19 @@ class Solution {
 public:
     string makeGood(string s) {
         string result = "";
-        stack<char> charStack;
+        stack<char> Stack;
 
         for (char ch : s) {
-            if (!charStack.empty() && abs(charStack.top() - ch) == 32) {
-                charStack.pop();
+            if (!Stack.empty() && abs(Stack.top() - ch) == 32) {
+                Stack.pop();
             } else {
-                charStack.push(ch);
+                Stack.push(ch);
             }
         }
 
-        while (!charStack.empty()) {
-            result = charStack.top() + result;
-            charStack.pop();
+        while (!Stack.empty()) {
+            result = Stack.top() + result;
+            Stack.pop();
         }
 
         return result;
