@@ -2,9 +2,11 @@
 #include <unordered_set>
 #include <algorithm>
 
-class Solution {
+class Solution
+{
 public:
-    int maxVowels(string s, int k) {
+    int maxVowels(string s, int k)
+    {
         int maxVowels = 0;
         int windowVowels = 0;
 
@@ -18,7 +20,8 @@ public:
         maxVowels = windowVowels;
 
         // Slide the window and update the maximum number of vowels
-        for (int i = k; i < s.length(); i++) {
+        for (int i = k; i < s.length(); i++)
+        {
             if (vowels.find(s[i - k]) != vowels.end())
                 windowVowels--;
 
