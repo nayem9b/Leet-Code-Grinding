@@ -1,8 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
-    int matrixScore(std::vector<std::vector<int>>& grid) {
+    int matrixScore(vector<vector<int>>& grid) {
         int ROWS = grid.size();
-        int COLS = grid[0].size();
+       
         int res = (1 << (COLS - 1)) * ROWS;
         
         for (int r = 0; r < ROWS; ++r) {
@@ -12,7 +14,7 @@ public:
                 }
             }
         }
-        
+         
         for (int c = 1; c < COLS; ++c) {
             int count1 = 0;
             for (int r = 0; r < ROWS; ++r) {
@@ -28,3 +30,9 @@ public:
         return res;
     }
 };
+
+int main()
+{
+    
+    return 0;
+}
