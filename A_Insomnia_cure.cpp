@@ -1,25 +1,27 @@
-class Solution {
-public:
-    bool canBeValid(string s, string locked) {
-        int n = s.size();
-        if (n % 2 != 0)
-            return false;
+#include <iostream>
+#include <cstdio>
+using namespace std;
 
-        int open = 0, close = 0, unlocked1 = 0, unlocked2 = 0;
-        for (int i = 0; i < s.size(); i++) {
-            if (locked[i] == '0') unlocked1++;
-            else if (s[i] == '(') open++;
-            else if (s[i] == ')') open--;
-            if (open + unlocked1 < 0)
-                return false;
-
-            int j = n - i - 1;
-            if (locked[j] == '0') unlocked2++;
-            else if (s[j] == ')') close++;
-            else if (s[j] == '(') close--;
-            if (close + unlocked2 < 0)
-                return false;
-        }
-        return true;
+int main()
+{
+    int k, l, m, n, d;
+    int cont = 0;
+    
+    cin >> k >> l >> m >> n >> d;
+    cont = d;
+    
+    if(k == 1 || l == 1 || m == 1 || n == 1)
+    {
+        cout << d << endl;
     }
-};
+    else
+    {
+        for(int i = 1; i <= d; i++)
+        {
+            if((i%k != 0) && (i%l != 0) && (i%m != 0) && (i%n != 0))
+                cont--;
+        }
+        cout << cont << endl;
+    }
+    return 0;
+}
